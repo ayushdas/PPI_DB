@@ -1,5 +1,5 @@
-CREATE TABLE agent (agentid int UNIQUE NOT NULL AUTO_INCREMENT,
-name varchar(200),
+CREATE TABLE agent (id int UNIQUE NOT NULL AUTO_INCREMENT,
+name varchar(200) BINARY,
 description varchar(200), 
 type varchar(200), 
 gene varchar(200), 
