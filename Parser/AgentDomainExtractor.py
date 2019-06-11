@@ -9,14 +9,12 @@ rb = open_workbook("rule_baseV0.2.xlsx")
 r_sheet = rb.sheet_by_index(0) 
 write_copy = copy(rb) 
 w_sheet = write_copy.get_sheet(2) 
-
-
 for i in range(1,385): # Change Here To Control The Rows To Process (Excel has Indices 1...N but Python has Indices 0..N-1)
             rule_structure = s.cell(i,5).value
             rule_id = s.cell(i,0).value
             if (len(rule_structure) < 1):
                 continue
-            print("The rule_id is: ",rule_id)
+            # print("The rule_id is: ",rule_id)
             rule = rule_structure.split("@")[0]
             rule = rule.replace("->",",").replace("<","")
             agent_domains = rule.split(", ")
@@ -25,6 +23,7 @@ for i in range(1,385): # Change Here To Control The Rows To Process (Excel has I
             agent_plus_domains = []
             for agent_domain in agent_domains:
                 agent = agent_domain.split("(")[0]
+                agent = agent.strip()
                 agents.append(agent)
                 doms = agent_domain.replace(")","")
                 if ('(' in doms):
@@ -35,7 +34,8 @@ for i in range(1,385): # Change Here To Control The Rows To Process (Excel has I
                 # print(doms)
                 agent_plus_domain_string = agent + "("
                 for dom in doms:
-                    dom = dom.split("[")[0]
+                    dom = dom.split("[")[0].split("{")[0].split("!")[0]
+                    dom = dom.strip()                    
                     domains.append(dom)
                     agent_plus_domain_string += dom +","
                 agent_plus_domain_string = agent_plus_domain_string[:-1] + ")"
@@ -46,9 +46,11 @@ for i in range(1,385): # Change Here To Control The Rows To Process (Excel has I
             agents.sort()
             domains.sort()
             agent_plus_domains.sort()
-            print(agents)
-            print(domains)
-            print(agent_plus_domains)
-            print()
-            # w_sheet.write(i, 13, 'Combo I 3-4 year old')
+            # print(agents)
+            # print(domains)
+            # print(agent_plus_domains)
+            # print()            
+            w_sheet.write(i, 13, ",".join(agents))
+            w_sheet.write(i, 14, ",".join(domains))
+            w_sheet.write(i, 15, ",".join(agent_plus_domains))
 write_copy.save("agent_seperation_domain.xls")
