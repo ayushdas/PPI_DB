@@ -52,5 +52,5 @@ for i in range(1,385): # Change Here To Control The Rows To Process (Excel has I
             # print()            
             w_sheet.write(i, 13, ",".join(agents))
             w_sheet.write(i, 14, ",".join(domains))
-            w_sheet.write(i, 15, ",".join(agent_plus_domains))
+            w_sheet.write(i, 15, "|".join(agent_plus_domains))
 write_copy.save("agent_seperation_domain.xls")

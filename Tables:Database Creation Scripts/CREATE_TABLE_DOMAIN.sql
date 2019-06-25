@@ -1,6 +1,7 @@
-CREATE TABLE domain (id int UNIQUE NOT NULL AUTO_INCREMENT,
+CREATE TABLE domain (id int AUTO_INCREMENT,
 name varchar(200) BINARY,
-agent_name varchar(200) REFERENCES agent,
+agent_name varchar(200),
 type varchar(200),
-PRIMARY KEY (name)
+states varchar(20),
+PRIMARY KEY (id)
 );

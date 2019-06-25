@@ -101,3 +101,4 @@ Insert into domain values (100,'ca3','CB','none');
 Insert into domain values (101,'PDZ4~u','GRIP','none');
 Insert into domain values (102,'GK','PSD95,PSD93,SAP97,SAP102,S-SCAM,CASK','none');
 Insert into domain values (103,'SR','ACTN','none');
+INSERT INTO domain values (104,'s831','GLUR1','none','p,u');

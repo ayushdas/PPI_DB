@@ -45,12 +45,31 @@ for domain, agents in domains_dict.items() :
     ctr += 1
     seperator = ','
     agents_string = '\'' + seperator.join(agents) + '\''
+    dt = domain
+    state = "none"
+    if "~" in domain:
+        doms = domain.split("~")
+        domain = doms[0]
+        if (len (doms) > 1) :
+            state = doms[1]
+        else:
+            state = "none"
+    if "{" in domain:
+        doms = domain.split("{")
+        domain = doms[0]
+        if (len (doms) > 1) :
+            state = doms[1]
+        else:
+            state = "none"
     domain = '\'' + domain + '\''
     string = "Insert into domain values ("+str(ctr)+","
     type_of_domain = '\'' + "none" + '\''
-    string += domain + "," + agents_string + "," + type_of_domain +");"
+    state = '\'' + state + '\''
+    string += domain + "," + agents_string + "," + type_of_domain + "," + state + ");"
     # print (domain,agents_string)
+    # print(dt," ",domain," ",state,)
     print(string)
+    
 
 
 
