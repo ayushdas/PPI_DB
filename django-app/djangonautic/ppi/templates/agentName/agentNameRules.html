@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+            Agent Name Rules
+        </title>
+        <script src="jquery.min.js"></script>
+        <script src="jquery.table2excel.js"></script>
+        <style>
+                table, th, td {
+                padding: 3px;
+                border: 1px solid black; 
+                border-collapse: collapse;
+                width: 98%;
+                table-layout: fixed;
+                word-wrap:break-word;
+                text-align: center;
+                left: 60%;
+                }
+                th{
+                    background-color: #ffffb3;
+                }
+                tr:nth-child(odd) {background-color: #f2f2f2;}
+                h2.align-center {
+                    text-align: center;
+                }
+                /* .center{
+                position:relative;
+                left:10%;
+                top:10%;
+                margin-left:-390px;
+                margin-top:-325px;
+                } */
+                .fsSubmitButton
+                {
+                border-top:		1px solid black;
+                border-left:		1px solid black;
+                border-right:		1px solid black;
+                border-bottom:		1px solid black;
+                padding:		20px 40px !important;
+                font-size:		14px !important;
+                background-color: 	#F5F5F5;
+                font-weight:		bold;
+                color:			black;
+                border-radius: 4px;
+                position: relative;
+                left: 40%;
+                top: 0.8em;
+                }
+                a:link {
+                 text-decoration: none;
+                }
+                a:visited {
+                text-decoration: none;
+                }
+
+                a:hover {
+                text-decoration: none;
+                }
+
+                a:active {
+                text-decoration: none;
+                }
+
+                </style>
+
+    </head>
+    {% block body %}
+            <h2 class="align-center"><u>The following PPI rules have been retrieved</u></h2>
+            <table align="center" id='rulesTable'>
+                    <tr>
+                      <th>Rule ID</th>
+                      <th>Name</th>
+                      <th>ID of Parent</th>
+                      <th>Description</th>
+                      <th>Structure</th>
+                      <th>Reference</th>
+                      <th>Rate Constant</th>
+                      <th>Kinetic Constant</th>
+                      <th>Dimension</th>
+                      <th>Estimated</th>
+                      <th>Source</th>
+                      <th>Model Source</th>
+                      <th>Comments</th>
+                    </tr>               
+            {% for post in posts %}
+            <tr>
+                <td>{{post.id}}</td>
+                <td>{{post.name}}</td>
+                <td>{{post.parent_rule_id}}</td>
+                <td>{{post.description}}</td>
+                <td>{{post.rule_structure}}</td>
+                <td>{{post.ref}}</td>
+                <td>{{post.rate_constant}}</td>
+                <td>{{post.kinetic_constant}}</td>
+                <td>{{post.dimension}}</td>
+                <td>{{post.estimated}}</td>
+                <td>{{post.source}}</td>
+                <td>{{post.model_source}}</td> 
+                <td>{{post.comments}}</td>                  
+            </tr>                       
+            {% endfor %}  
+        </table>
+    {% endblock %}
+    
+    <!-- <div class="center"> -->
+    <br> <br>
+    <button type="submit" class="fsSubmitButton"><a href="/ppi/AgentNameForm">Back</a></button>
+    <button id="btnexport" >Export</button>
+    <script>
+        $(function () {
+            $("#btnexport").click(function () {
+                $("#rulesTable").table2excel();
+            });
+        });
+    </script>
+    <!-- </div> -->
+</html>
