@@ -44,21 +44,18 @@ Insert into rule_domain_agent values (9,90,3);
 Insert into rule_domain_agent values (10,90,3);
 Insert into rule_domain_agent values (10,59,1);
 -- Rule: 10  completed
--- *** Problem in DOMAIN_NAME, with rule id  11  where domain is  c21  and agent is CB
 Insert into rule_domain_agent values (11,101,3);
 Insert into rule_domain_agent values (11,59,1);
 -- Rule: 11  completed
 Insert into rule_domain_agent values (12,59,1);
 Insert into rule_domain_agent values (12,101,3);
 -- Rule: 12  completed
--- *** Problem in DOMAIN_NAME, with rule id  13  where domain is  c31  and agent is CB
 Insert into rule_domain_agent values (13,59,1);
 Insert into rule_domain_agent values (13,84,3);
 -- Rule: 13  completed
 Insert into rule_domain_agent values (14,59,1);
 Insert into rule_domain_agent values (14,84,3);
 -- Rule: 14  completed
--- *** Problem in DOMAIN_NAME, with rule id  15  where domain is  c41  and agent is CB
 Insert into rule_domain_agent values (15,33,3);
 Insert into rule_domain_agent values (15,59,1);
 -- Rule: 15  completed
@@ -135,7 +132,7 @@ Insert into rule_domain_agent values (33,49,10);
 -- Rule: 33  completed
 Insert into rule_domain_agent values (34,21,8);
 -- Rule: 34  completed
--- *** Problem in AGENT_NAME, with rule id  35  agent is  SynGAP
+insert into rule_domain_agent values (35,49,37);
 Insert into rule_domain_agent values (35,49,8);
 Insert into rule_domain_agent values (35,76,8);
 -- Rule: 35  completed
@@ -160,7 +157,7 @@ Insert into rule_domain_agent values (41,8,12);
 -- Rule: 41  completed
 Insert into rule_domain_agent values (42,21,9);
 -- Rule: 42  completed
--- *** Problem in AGENT_NAME, with rule id  43  agent is  SynGAP
+insert into rule_domain_agent values (43,49,37);
 Insert into rule_domain_agent values (43,35,9);
 Insert into rule_domain_agent values (43,54,9);
 -- Rule: 43  completed
@@ -246,7 +243,7 @@ Insert into rule_domain_agent values (69,35,13);
 Insert into rule_domain_agent values (70,76,12);
 Insert into rule_domain_agent values (70,35,14);
 -- Rule: 70  completed
--- *** Problem in AGENT_NAME, with rule id  71  agent is  NR2
+insert into rule_domain_agent values (71,99,14);
 Insert into rule_domain_agent values (71,99,12);
 Insert into rule_domain_agent values (71,100,40);
 -- Rule: 71  completed
@@ -270,12 +267,12 @@ Insert into rule_domain_agent values (77,8,19);
 Insert into rule_domain_agent values (78,35,33);
 Insert into rule_domain_agent values (78,51,20);
 -- Rule: 78  completed
--- *** Problem in DOMAIN_NAME, with rule id  79  where domain is  WD1  and agent is RACK1
+Insert into rule_domain_agent values (79,109,35);
 Insert into rule_domain_agent values (79,47,20);
 -- Rule: 79  completed
 Insert into rule_domain_agent values (80,42,11);
 -- Rule: 80  completed
--- *** Problem in AGENT_NAME, with rule id  81  agent is  SynGAP
+insert into rule_domain_agent values (81,49,37);
 Insert into rule_domain_agent values (81,54,11);
 Insert into rule_domain_agent values (81,35,11);
 -- Rule: 81  completed
@@ -303,8 +300,8 @@ Insert into rule_domain_agent values (88,76,12);
 Insert into rule_domain_agent values (89,76,12);
 Insert into rule_domain_agent values (89,35,14);
 -- Rule: 89  completed
--- *** Problem in AGENT_NAME, with rule id  90  agent is  SynGAP
 Insert into rule_domain_agent values (90,35,12);
+insert into rule_domain_agent values (90,49,37);
 Insert into rule_domain_agent values (90,54,12);
 -- Rule: 90  completed
 Insert into rule_domain_agent values (91,54,12);
@@ -340,11 +337,11 @@ Insert into rule_domain_agent values (100,24,28);
 Insert into rule_domain_agent values (101,96,28);
 Insert into rule_domain_agent values (101,35,42);
 -- Rule: 101  completed
--- *** Problem in AGENT_NAME, with rule id  102  agent is  PROSAPIP1
+Insert into rule_domain_agent values (102,35,51);
 Insert into rule_domain_agent values (102,35,42);
 Insert into rule_domain_agent values (102,96,28);
 -- Rule: 102  completed
--- *** Problem in DOMAIN_NAME, with rule id  103  where domain is  SAM1  and agent is SHANK
+Insert into rule_domain_agent values (103,69,28);
 -- Rule: 103  completed
 Insert into rule_domain_agent values (104,24,42);
 Insert into rule_domain_agent values (104,39,29);
@@ -395,19 +392,18 @@ Insert into rule_domain_agent values (119,23,44);
 Insert into rule_domain_agent values (120,89,49);
 Insert into rule_domain_agent values (120,66,41);
 -- Rule: 120  completed
--- *** Problem in AGENT_NAME, with rule id  121  agent is  PROSAPIP1
--- *** Problem in DOMAIN_NAME, with rule id  121  where domain is  CC1  and agent is PROSAPIP1
+insert into rule_domain_agent values (121,105,51);
 Insert into rule_domain_agent values (121,36,41);
 -- Rule: 121  completed
 Insert into rule_domain_agent values (122,78,33);
 Insert into rule_domain_agent values (122,97,21);
 -- Rule: 122  completed
--- *** Problem in DOMAIN_NAME, with rule id  123  where domain is  N2  and agent is GluR1
--- *** Problem in DOMAIN_NAME, with rule id  123  where domain is  N1  and agent is GluR2
+Insert into rule_domain_agent values (123,83,23);
+Insert into rule_domain_agent values (123,58,24);
 -- Rule: 123  completed
--- *** Problem in DOMAIN_NAME, with rule id  124  where domain is  N1  and agent is GluR1
+Insert into rule_domain_agent values (124,83,23);
 -- Rule: 124  completed
--- *** Problem in DOMAIN_NAME, with rule id  125  where domain is  N2  and agent is GluR2
+Insert into rule_domain_agent values (125,58,24);
 -- Rule: 125  completed
 Insert into rule_domain_agent values (126,20,10);
 Insert into rule_domain_agent values (126,1,23);
@@ -433,7 +429,7 @@ Insert into rule_domain_agent values (132,8,52);
 Insert into rule_domain_agent values (133,42,52);
 Insert into rule_domain_agent values (133,42,11);
 -- Rule: 133  completed
--- *** Problem in AGENT_NAME, with rule id  134  agent is  SynCAM
+Insert into rule_domain_agent values (134,35,53);
 Insert into rule_domain_agent values (134,96,52);
 Insert into rule_domain_agent values (134,35,52);
 -- Rule: 134  completed
@@ -458,7 +454,7 @@ Insert into rule_domain_agent values (140,54,8);
 Insert into rule_domain_agent values (141,54,9);
 Insert into rule_domain_agent values (141,35,55);
 -- Rule: 141  completed
--- *** Problem in DOMAIN_NAME, with rule id  142  where domain is  imd  and agent is Rac1
+Insert into rule_domain_agent values (142,110,44);
 Insert into rule_domain_agent values (142,89,44);
 Insert into rule_domain_agent values (142,9,55);
 -- Rule: 142  completed
@@ -480,8 +476,7 @@ Insert into rule_domain_agent values (147,8,19);
 Insert into rule_domain_agent values (148,61,58);
 Insert into rule_domain_agent values (148,8,59);
 -- Rule: 148  completed
--- *** Problem in AGENT_NAME, with rule id  149  agent is  Src
-Insert into rule_domain_agent values (149,8,59);
+Insert into rule_domain_agent values (149,8,17);
 Insert into rule_domain_agent values (149,24,59);
 -- Rule: 149  completed
 Insert into rule_domain_agent values (150,8,43);
@@ -494,9 +489,8 @@ Insert into rule_domain_agent values (151,44,60);
 Insert into rule_domain_agent values (152,89,60);
 Insert into rule_domain_agent values (152,48,60);
 -- Rule: 152  completed
--- *** Problem in AGENT_NAME, with rule id  153  agent is  SynGAP
+insert into rule_domain_agent values (153,66,37);
 Insert into rule_domain_agent values (153,89,60);
-Insert into rule_domain_agent values (153,66,60);
 -- Rule: 153  completed
 Insert into rule_domain_agent values (154,24,61);
 Insert into rule_domain_agent values (154,8,43);
@@ -507,17 +501,15 @@ Insert into rule_domain_agent values (155,48,60);
 Insert into rule_domain_agent values (156,8,18);
 Insert into rule_domain_agent values (156,86,61);
 -- Rule: 156  completed
--- *** Problem in AGENT_NAME, with rule id  157  agent is  Src
 Insert into rule_domain_agent values (157,14,62);
 Insert into rule_domain_agent values (157,99,62);
-Insert into rule_domain_agent values (157,100,62);
+Insert into rule_domain_agent values (157,100,17);
 Insert into rule_domain_agent values (157,73,62);
 -- Rule: 157  completed
 Insert into rule_domain_agent values (158,44,60);
 Insert into rule_domain_agent values (158,89,60);
 Insert into rule_domain_agent values (158,94,62);
 -- Rule: 158  completed
--- *** Problem in DOMAIN_NAME, with rule id  159  where domain is  RBD  and agent is RAF1
 Insert into rule_domain_agent values (159,79,62);
 Insert into rule_domain_agent values (159,44,21);
 Insert into rule_domain_agent values (159,94,62);
@@ -526,7 +518,7 @@ Insert into rule_domain_agent values (160,74,62);
 Insert into rule_domain_agent values (160,44,20);
 Insert into rule_domain_agent values (160,65,62);
 -- Rule: 160  completed
--- *** Problem in DOMAIN_NAME, with rule id  161  where domain is  raf  and agent is PAK1
+Insert into rule_domain_agent values (161,111,48);
 Insert into rule_domain_agent values (161,73,62);
 Insert into rule_domain_agent values (161,23,62);
 Insert into rule_domain_agent values (161,88,62);
@@ -544,8 +536,7 @@ Insert into rule_domain_agent values (164,79,49);
 -- Rule: 164  completed
 Insert into rule_domain_agent values (165,89,49);
 -- Rule: 165  completed
--- *** Problem in AGENT_NAME, with rule id  166  agent is  SynGAP
-Insert into rule_domain_agent values (166,66,49);
+Insert into rule_domain_agent values (166,66,37);
 Insert into rule_domain_agent values (166,89,49);
 -- Rule: 166  completed
 Insert into rule_domain_agent values (167,35,63);
@@ -575,16 +566,14 @@ Insert into rule_domain_agent values (174,96,64);
 Insert into rule_domain_agent values (175,63,4);
 Insert into rule_domain_agent values (175,72,64);
 -- Rule: 175  completed
--- *** Problem in AGENT_NAME, with rule id  176  agent is  NR2
+Insert into rule_domain_agent values (176,3,13);
 Insert into rule_domain_agent values (176,77,65);
-Insert into rule_domain_agent values (176,3,65);
 -- Rule: 176  completed
 Insert into rule_domain_agent values (177,3,15);
 Insert into rule_domain_agent values (177,77,65);
 -- Rule: 177  completed
--- *** Problem in DOMAIN_NAME, with rule id  178  where domain is  cc  and agent is ACTN
+Insert into rule_domain_agent values (178,112,65);
 -- Rule: 178  completed
--- *** Problem in DOMAIN_NAME, with rule id  179  where domain is  k2  and agent is CaMKII
 Insert into rule_domain_agent values (179,26,4);
 Insert into rule_domain_agent values (179,4,65);
 Insert into rule_domain_agent values (179,57,4);
@@ -592,38 +581,30 @@ Insert into rule_domain_agent values (179,57,4);
 Insert into rule_domain_agent values (180,35,65);
 Insert into rule_domain_agent values (180,96,64);
 -- Rule: 180  completed
--- *** Problem in DOMAIN_NAME, with rule id  181  where domain is  k2  and agent is CaMKII
 Insert into rule_domain_agent values (181,57,4);
 Insert into rule_domain_agent values (181,26,4);
 Insert into rule_domain_agent values (181,4,65);
 -- Rule: 181  completed
--- *** Problem in DOMAIN_NAME, with rule id  182  where domain is  T  and agent is CaMKII
--- *** Problem in AGENT_NAME, with rule id  182  agent is  NR2
-Insert into rule_domain_agent values (182,72,4);
+Insert into rule_domain_agent values (182,106,4);
 Insert into rule_domain_agent values (182,26,4);
+insert into rule_domain_agent values (182,72,14);
 -- Rule: 182  completed
--- *** Problem in AGENT_NAME, with rule id  183  agent is  NR2
--- *** Problem in DOMAIN_NAME, with rule id  183  where domain is  S831  and agent is  NR2
--- *** Problem in DOMAIN_NAME, with rule id  183  where domain is  S831  and agent is  NR2
-Insert into rule_domain_agent values (183,72,4);
+insert into rule_domain_agent values (183,72,14);
+Insert into rule_domain_agent values (183,107,14);
 -- Rule: 183  completed
--- *** Problem in AGENT_NAME, with rule id  184  agent is  ACTB
--- *** Problem in DOMAIN_NAME, with rule id  184  where domain is  actn  and agent is ACTB
-Insert into rule_domain_agent values (184,102,4);
+insert into rule_domain_agent values (184,108,67);
+Insert into rule_domain_agent values (184,102,65);
 -- Rule: 184  completed
--- *** Problem in AGENT_NAME, with rule id  185  agent is  NR2
-Insert into rule_domain_agent values (185,3,65);
+Insert into rule_domain_agent values (185,3,14);
 Insert into rule_domain_agent values (185,77,65);
 -- Rule: 185  completed
--- *** Problem in AGENT_NAME, with rule id  186  agent is  CAMKII
--- *** Problem in AGENT_NAME, with rule id  186  agent is  MUPP
-Insert into rule_domain_agent values (186,95,65);
-Insert into rule_domain_agent values (186,57,65);
+Insert into rule_domain_agent values (186,57,4);
+Insert into rule_domain_agent values (186,95,66);
 -- Rule: 186  completed
--- *** Problem in DOMAIN_NAME, with rule id  187  where domain is  T  and agent is CaMKII
+Insert into rule_domain_agent values (187,106,4);
 Insert into rule_domain_agent values (187,3,15);
 -- Rule: 187  completed
--- *** Problem in DOMAIN_NAME, with rule id  188  where domain is  T  and agent is CaMKII
+insert into rule_domain_agent values (188,106,4);
 Insert into rule_domain_agent values (188,72,23);
 Insert into rule_domain_agent values (188,104,23);
 Insert into rule_domain_agent values (188,44,4);
@@ -631,7 +612,7 @@ Insert into rule_domain_agent values (188,44,4);
 Insert into rule_domain_agent values (189,104,23);
 Insert into rule_domain_agent values (189,72,23);
 -- Rule: 189  completed
--- *** Problem in DOMAIN_NAME, with rule id  190  where domain is  SH3  and agent is SAP97
+Insert into rule_domain_agent values (190,12,11);
 Insert into rule_domain_agent values (190,76,11);
 -- Rule: 190  completed
 Insert into rule_domain_agent values (191,35,13);
@@ -641,20 +622,17 @@ Insert into rule_domain_agent values (191,76,11);
 Insert into rule_domain_agent values (192,76,11);
 Insert into rule_domain_agent values (192,35,13);
 -- Rule: 192  completed
--- *** Problem in DOMAIN_NAME, with rule id  193  where domain is  T  and agent is CaMKII
+Insert into rule_domain_agent values (193,106,4);
 Insert into rule_domain_agent values (193,12,11);
 -- Rule: 193  completed
--- *** Problem in DOMAIN_NAME, with rule id  194  where domain is  T  and agent is CaMKII
--- *** Problem in DOMAIN_NAME, with rule id  194  where domain is  SH3  and agent is SAP97
+Insert into rule_domain_agent values (194,106,4);
 Insert into rule_domain_agent values (194,12,11);
 -- Rule: 194  completed
 Insert into rule_domain_agent values (195,44,4);
 Insert into rule_domain_agent values (195,72,36);
 -- Rule: 195  completed
--- *** Problem in AGENT_NAME, with rule id  196  agent is  SynGAP
 Insert into rule_domain_agent values (196,3,36);
 -- Rule: 196  completed
--- *** Problem in AGENT_NAME, with rule id  197  agent is  SynGAP
 Insert into rule_domain_agent values (197,49,36);
 Insert into rule_domain_agent values (197,3,36);
 -- Rule: 197  completed
