@@ -1,0 +1,47 @@
+-- *** Problem in DOMAIN_NAME, with rule id 11 where domain is c21 and agent is CB
+-- *** Problem in DOMAIN_NAME, with rule id 13 where domain is c31 and agent is CB
+-- *** Problem in DOMAIN_NAME, with rule id 15 where domain is c41 and agent is CB
+-- *** Problem in AGENT_NAME, with rule id 35 agent is SynGAP
+-- *** Problem in AGENT_NAME, with rule id 43 agent is SynGAP
+-- *** Problem in AGENT_NAME, with rule id 71 agent is NR2
+-- *** Problem in DOMAIN_NAME, with rule id 79 where domain is WD1 and agent is RACK1
+-- *** Problem in AGENT_NAME, with rule id 81 agent is SynGAP
+-- *** Problem in AGENT_NAME, with rule id 90 agent is SynGAP
+-- *** Problem in AGENT_NAME, with rule id 102 agent is PROSAPIP1
+-- *** Problem in DOMAIN_NAME, with rule id 103 where domain is SAM1 and agent is SHANK
+-- *** Problem in AGENT_NAME, with rule id 121 agent is PROSAPIP1
+-- *** Problem in DOMAIN_NAME, with rule id 121 where domain is CC1 and agent is PROSAPIP1
+-- *** Problem in DOMAIN_NAME, with rule id 123 where domain is N2 and agent is GluR1
+-- *** Problem in DOMAIN_NAME, with rule id 123 where domain is N1 and agent is GluR2
+-- *** Problem in DOMAIN_NAME, with rule id 124 where domain is N1 and agent is GluR1
+-- *** Problem in DOMAIN_NAME, with rule id 125 where domain is N2 and agent is GluR2
+-- *** Problem in AGENT_NAME, with rule id 134 agent is SynCAM
+-- *** Problem in DOMAIN_NAME, with rule id 142 where domain is imd and agent is Rac1
+-- *** Problem in AGENT_NAME, with rule id 149 agent is Src
+-- *** Problem in AGENT_NAME, with rule id 153 agent is SynGAP
+-- *** Problem in AGENT_NAME, with rule id 157 agent is Src
+-- *** Problem in DOMAIN_NAME, with rule id 159 where domain is RBD and agent is RAF1
+-- *** Problem in DOMAIN_NAME, with rule id 161 where domain is raf and agent is PAK1
+-- *** Problem in AGENT_NAME, with rule id 166 agent is SynGAP
+-- *** Problem in AGENT_NAME, with rule id 176 agent is NR2
+-- *** Problem in DOMAIN_NAME, with rule id 178 where domain is cc and agent is ACTN
+-- *** Problem in DOMAIN_NAME, with rule id 179 where domain is k2 and agent is CaMKII
+-- *** Problem in DOMAIN_NAME, with rule id 181 where domain is k2 and agent is CaMKII
+-- *** Problem in DOMAIN_NAME, with rule id 182 where domain is T and agent is CaMKII
+-- *** Problem in AGENT_NAME, with rule id 182 agent is NR2
+-- *** Problem in AGENT_NAME, with rule id 183 agent is NR2
+-- *** Problem in DOMAIN_NAME, with rule id 183 where domain is S831 and agent is NR2
+-- *** Problem in DOMAIN_NAME, with rule id 183 where domain is S831 and agent is NR2
+-- *** Problem in AGENT_NAME, with rule id 184 agent is ACTB
+-- *** Problem in DOMAIN_NAME, with rule id 184 where domain is actn and agent is ACTB
+-- *** Problem in AGENT_NAME, with rule id 185 agent is NR2
+-- *** Problem in AGENT_NAME, with rule id 186 agent is CAMKII
+-- *** Problem in AGENT_NAME, with rule id 186 agent is MUPP
+-- *** Problem in DOMAIN_NAME, with rule id 187 where domain is T and agent is CaMKII
+-- *** Problem in DOMAIN_NAME, with rule id 188 where domain is T and agent is CaMKII
+-- *** Problem in DOMAIN_NAME, with rule id 190 where domain is SH3 and agent is SAP97
+-- *** Problem in DOMAIN_NAME, with rule id 193 where domain is T and agent is CaMKII
+-- *** Problem in DOMAIN_NAME, with rule id 194 where domain is T and agent is CaMKII
+-- *** Problem in DOMAIN_NAME, with rule id 194 where domain is SH3 and agent is SAP97
+-- *** Problem in AGENT_NAME, with rule id 196 agent is SynGAP
+-- *** Problem in AGENT_NAME, with rule id 197 agent is SynGAP
