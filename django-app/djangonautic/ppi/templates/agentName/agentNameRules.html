@@ -1,88 +1,114 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.dataTables.min.css' %}" /> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" /> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/dataTables.bootstrap.min.css' %}" /> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/buttons.dataTables.min.css' %}" /> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        <script src="{% static 'js/jquery-2.2.4.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/jquery.dataTables.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/dataTables.buttons.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/jszip.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/pdfmake.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/vfs_fonts.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/buttons.html5.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/buttons.print.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/app.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/jquery.mark.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/datatables.mark.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/buttons.colVis.min.js' %}" type="text/javascript"></script>
         <title>
             Agent Name Rules
-        </title>
-        <script src="jquery.min.js"></script>
-        <script src="jquery.table2excel.js"></script>
+        </title>    
         <style>
-                table, th, td {
-                padding: 3px;
-                border: 1px solid black; 
-                border-collapse: collapse;
-                width: 98%;
-                table-layout: fixed;
-                word-wrap:break-word;
-                text-align: center;
-                left: 60%;
-                }
-                th{
-                    background-color: #ffffb3;
-                }
-                tr:nth-child(odd) {background-color: #f2f2f2;}
-                h2.align-center {
-                    text-align: center;
-                }
-                /* .center{
-                position:relative;
-                left:10%;
-                top:10%;
-                margin-left:-390px;
-                margin-top:-325px;
-                } */
-                .fsSubmitButton
-                {
-                border-top:		1px solid black;
-                border-left:		1px solid black;
-                border-right:		1px solid black;
-                border-bottom:		1px solid black;
-                padding:		20px 40px !important;
-                font-size:		14px !important;
-                background-color: 	#F5F5F5;
-                font-weight:		bold;
-                color:			black;
-                border-radius: 4px;
-                position: relative;
-                left: 40%;
-                top: 0.8em;
-                }
-                a:link {
-                 text-decoration: none;
-                }
-                a:visited {
-                text-decoration: none;
-                }
+        table {
+            width: 100%;
+            word-wrap:break-word;
+            table-layout: fixed;
+        }
+        th {
+            font-size:90%;
+        }
+        td {
+            font-size:80%;
+        }
+        h2.align-center {
+            text-align: center;
+        }
+        .fsSubmitButton
+        {
+        border-top:		1px solid black;
+        border-left:		1px solid black;
+        border-right:		1px solid black;
+        border-bottom:		1px solid black;
+        padding:		20px 40px !important;
+        font-size:		14px !important;
+        background-color: 	#F5F5F5;
+        font-weight:		bold;
+        color:			black;
+        border-radius: 4px;
+        position: relative;
+        left: 40%;
+        top: 0.8em;
+        }
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+        text-decoration: none;
+        }
 
-                a:hover {
-                text-decoration: none;
-                }
+        a:hover {
+        text-decoration: none;
+        }
 
-                a:active {
-                text-decoration: none;
-                }
+        a:active {
+        text-decoration: none;
+        }
 
-                </style>
+        a {
+        color: black;
+        }
+
+        a:link {
+        color: black;
+        }
+
+        a:visited {
+        color: black;
+        }
+        a:hover {
+        color: black;
+        }
+        </style>
 
     </head>
+    <body class="container">
     {% block body %}
-            <h2 class="align-center"><u>The following PPI rules have been retrieved</u></h2>
-            <table align="center" id='rulesTable'>
+            <h2 class="align-center"><u>The following PPI rules have been retrieved</u></h2><br>
+            <table id="maintable" class="display compact cell-border" cellspacing="0" width="100%">
+            <!-- <table align="center" id='rulesTable'> -->
+            <thead>
                     <tr>
                       <th>Rule ID</th>
                       <th>Name</th>
                       <th>ID of Parent</th>
-                      <th>Description</th>
-                      <th>Structure</th>
-                      <th>Reference</th>
-                      <th>Rate Constant</th>
-                      <th>Kinetic Constant</th>
-                      <th>Dimension</th>
-                      <th>Estimated</th>
+                      <th>Desc-ription</th>
+                      <th>Struc-ture</th>
+                      <th>Refer-ence</th>
+                      <th>Rate Const-ant</th>
+                      <th>Kinetic Const-ant</th>
+                      <th>Dime-nsion</th>
+                      <th>Estim-ated</th>
                       <th>Source</th>
                       <th>Model Source</th>
-                      <th>Comments</th>
-                    </tr>               
+                      <th>Com-ments</th>
+                    </tr>
+            </thead>
+            <tbody>          
             {% for post in posts %}
             <tr>
                 <td>{{post.id}}</td>
@@ -100,19 +126,11 @@
                 <td>{{post.comments}}</td>                  
             </tr>                       
             {% endfor %}  
+        </tbody>
+        </tfoot>     
         </table>
-    {% endblock %}
-    
-    <!-- <div class="center"> -->
+    {% endblock %}    
     <br> <br>
     <button type="submit" class="fsSubmitButton"><a href="/ppi/AgentNameForm">Back</a></button>
-    <button id="btnexport" >Export</button>
-    <script>
-        $(function () {
-            $("#btnexport").click(function () {
-                $("#rulesTable").table2excel();
-            });
-        });
-    </script>
-    <!-- </div> -->
+    </body>
 </html>
