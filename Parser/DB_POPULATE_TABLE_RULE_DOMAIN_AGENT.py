@@ -81,7 +81,14 @@ for i in range(1,n+1):
             # ids.append((i,domain_id,agent_id))
     ids = list(set(ids))
     for id in ids:
-        sql_statement = "Insert into rule_domain_agent values (" + str(id[0]) + "," + str(id [1]) + "," + str(id[2]) + ");"
-        print(sql_statement)
+        verification_statement = "Select * from domain_agent where domain_id = " + str(id[1]) + " and agent_id = " + str(id[2])
+        mycursor.execute(verification_statement)
+        result_set = mycursor.fetchall()
+        if (len(result_set)<1):
+            error = "Rule id: "+str(i)+" Error in domain_agent pair domain_id "+ str(id[1]) + " and agent_id " + str(id[2]) 
+            print(error)
+        else:
+            sql_statement = "Insert into rule_domain_agent values (" + str(id[0]) + "," + str(id [1]) + "," + str(id[2]) + ");"
+            print(sql_statement)
     print("-- Rule:",i," completed")
 
