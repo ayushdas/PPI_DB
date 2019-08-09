@@ -1,2 +1,0 @@
--- *** Problem in AGENT_NAME, with rule id 186 agent is CAMKII
--- *** Problem in DOMAIN_NAME, with rule id 196 where domain is ? and agent is CaM
