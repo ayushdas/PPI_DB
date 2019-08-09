@@ -22,8 +22,11 @@ for result in domainresult:
     sql2 += '\'%' + agent + '%\''
     mycursor.execute(sql2)
     agent_id = mycursor.fetchall()
-    agent_id = agent_id[0][0]
-    sql_command = "INSERT INTO domain_agent values (" + str(domain_id) + "," + str(agent_id) + ");"
+    if (len(agent_id) > 0):
+      agent_id = agent_id[0][0]
+      sql_command = "INSERT INTO domain_agent values (" + str(domain_id) + "," + str(agent_id) + ");"
+    else: 
+      sql_command = "Agent name: " + agent + " in domain id " + str(domain_id) + "not found"
     # print(domain_id," ",agent_id)
     print(sql_command)
 
